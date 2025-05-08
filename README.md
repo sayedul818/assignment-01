@@ -40,12 +40,6 @@ type Product = {
   name: string;
   price: number;
 };
-Interface vs Type
-Interface	Type
-Used for objects	Used for objects
-Used for classes	Used for classes
-Can,t combine types	Can combine types
-Can,t use union types	Can use union types
 
 When to Use Interface or Type?
 Use interface if you need to describe an object or a class.
