@@ -1,9 +1,8 @@
-
 # Interface vs Type in TypeScript
 
 ## What is an Interface?
 
-An **interface** is like a rule for objects. It says that an object **must** have certain things. For example:
+An **interface** is like a system for objects. It says that an object **must** have certain things. For example:
 
 ```typescript
 interface Person {
@@ -12,7 +11,7 @@ interface Person {
 }
 ```
 
-This means if we use `Person`, the object must have a `name` (string) and `age` (number).
+This means that if we use `Person`, the object must have a `name` (string) and `age` (number).
 
 Here is an example:
 
@@ -25,7 +24,7 @@ const user: Person = {
 
 ## Interface in a Class
 
-We can also use an interface in a class. The class has to follow the rules of the interface.
+We can also use an interface in a class. The class has to follow the system of the interface.
 
 ```typescript
 class Student implements Person {
@@ -33,7 +32,7 @@ class Student implements Person {
 }
 ```
 
-This means the `Student` class must have a `name` and `age` just like the `Person` interface.
+This means that the `Student` class must have a `name` and `age` just like the `Person` interface.
 
 ## What is a Type?
 
@@ -65,3 +64,56 @@ type Product = {
 - Use **type** if you want to combine different types or use things like union types.
 
 
+
+# What is the use of the `keyof` keyword in TypeScript?
+
+## What is `keyof`?
+
+`keyof` is a word in TypeScript that helps us get the names of the keys in an object.  
+It gives us a type that is made from the keys of another type.
+
+It’s like asking, “What are the property names of this object?”
+
+## Example
+
+Let’s say we have a type for a person:
+
+```typescript
+type Person = {
+  name: string;
+  age: number;
+};
+```
+
+Now if we do this:
+
+```typescript
+type PersonKeys = keyof Person;
+```
+
+`PersonKeys` will be `"name" | "age"` because those are the keys in the `Person` type.
+
+## Why is it useful?
+
+we can use `keyof` to make yur code look like smarter and also safer.  
+For example, it helps make sure us only use keys that really exist in the object.
+
+Here’s a small function using `keyof`:
+
+```typescript
+function getValue<T, K extends keyof T>(obj: T, key: K): T[K] {
+  return obj[key];
+}
+
+const user = {
+  name: "Rafi",
+  age: 22
+};
+
+const userName = getValue(user, "name");
+```
+
+## Final Thoughts
+
+`keyof` is useful when we want to work with keys of an object.  
+It makes TypeScript more helpful and safe.  
