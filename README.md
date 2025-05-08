@@ -50,7 +50,3 @@ Use type if you want to combine different types or use things like union types.
 Final Thoughts
 Interface is good for simple things like objects and classes. Type is more flexible and can do more things. I learned this by practicing and using it in my code.
 
-### What’s changed:
-- The sentences are much more **natural** and **casual**, like you’re explaining it to a friend.
-- I avoided technical jargon as much as possible.
-- The overall tone is friendly and simple.
