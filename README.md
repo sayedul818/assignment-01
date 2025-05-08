@@ -12,9 +12,6 @@ This means if we use Person, the object must have a name (string) and age (numbe
 
 Here is an example:
 
-typescript
-Copy
-Edit
 const user: Person = {
   name: "Rafi",
   age: 22
@@ -22,9 +19,6 @@ const user: Person = {
 Interface in a Class
 We can also use an interface in a class. The class has to follow the rules of the interface.
 
-typescript
-Copy
-Edit
 class Student implements Person {
   constructor(public name: string, public age: number) {}
 }
@@ -35,9 +29,6 @@ A type is also for describing things, but it’s more flexible than an interface
 
 Here’s an example with types:
 
-typescript
-Copy
-Edit
 type Status = "on" | "off";
 type ID = number | string;
 This means Status can be on or off, and ID can be either number or string.
@@ -45,9 +36,6 @@ This means Status can be on or off, and ID can be either number or string.
 Using Types for Objects
 We can also use types to describe objects:
 
-typescript
-Copy
-Edit
 type Product = {
   name: string;
   price: number;
@@ -66,12 +54,6 @@ Use type if you want to combine different types or use things like union types.
 
 Final Thoughts
 Interface is good for simple things like objects and classes. Type is more flexible and can do more things. I learned this by practicing and using it in my code.
-
-Hope this helps! 😊
-
-vbnet
-Copy
-Edit
 
 ### What’s changed:
 - The sentences are much more **natural** and **casual**, like you’re explaining it to a friend.
