@@ -64,3 +64,4 @@ type Product = {
 - Use **interface** if you need to describe an object or a class.
 - Use **type** if you want to combine different types or use things like union types.
 
+
