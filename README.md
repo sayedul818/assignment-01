@@ -95,7 +95,7 @@ type PersonKeys = keyof Person;
 
 ## Why is it useful?
 
-we can use `keyof` to make yur code look like smarter and also safer.  
+we can use `keyof` to make our code look like more smarter and also safer.  
 For example, it helps make sure us only use keys that really exist in the object.
 
 Here’s a small function using `keyof`:
